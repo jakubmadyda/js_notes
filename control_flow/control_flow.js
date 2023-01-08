@@ -118,8 +118,8 @@ const namesUpper = [];
 // console.log(namesObjUpper)
 
 
-const namesUpper2 = names.map((name) => name[0].toUpperCase() + name.slice(1));
-console.log(namesUpper2)
+// const namesUpper2 = names.map((name) => name[0].toUpperCase() + name.slice(1));
+// console.log(namesUpper2)
 
 
 
