@@ -49,33 +49,64 @@ const data = [
     }
 ]
 
-function avgAge(items){
-    let totalAge = 0;
-
-    for (const item of items) {
-        totalAge += item.age;
-    }
-
-    return totalAge / items.length
-}
-
+// najszybsza
+//
+// function avgAge(items){
+//     let totalAge = 0;
+//
+//     for (const item of items) {
+//         totalAge += item.age;
+//     }
+//
+//     return totalAge / items.length
+// }
 // console.log(avgAge(data))
 
-function avgAgePeopleFromKrakow(items){
-    let totalAge = 0;
-    let counter = 0;
+// najbardziej optymalna
+//
+// function avgAge(persons){
+//     return persons.reduce((acc, ce) => acc + ce.age, 0) / persons.length
+// }
 
-    for (let i = 0; i < items.length; i++){
-        if (items[i].city.toLowerCase() === 'krakow'){
-            counter++;
-            totalAge += items[i].age;
-        }
-    }
+// poprzednia rozbita na dwie części
+//
+// function avgAge(persons) {
+//     const ages = persons.map((person) => person.age);
+//
+//     return ages.reduce((acc, ce) => acc + ce) / persons.length
+// }
 
-    return totalAge / counter;
-}
+
+// function avgAgePeopleFromKrakow(items){
+//     let totalAge = 0;
+//     let counter = 0;
+//
+//     for (let i = 0; i < items.length; i++){
+//         if (items[i].city.toLowerCase() === 'krakow'){
+//             counter++;
+//             totalAge += items[i].age;
+//         }
+//     }
+//
+//     return totalAge / counter;
+// }
 
 // console.log(avgAgePeopleFromKrakow(data));
+
+// function avgAgeKrakow(persons) {
+//     const personsKrakow = persons.filter((person) => person.city.toLowerCase() === 'krakow');
+//
+//     return personsKrakow.reduce((acc, ce) => acc + ce.age, 0) / personsKrakow.length;
+// }
+
+// nie optymalne, 3 pętle zamiast 2
+// function avgAgeKrakow(persons) {
+//     return persons
+//         .filter((person) => person.city.toLowerCase() === 'krakow') //chaining
+//         .reduce((acc, ce) => acc + ce.age, 0) /
+//         persons.filter((person) => person.city.toLowerCase() === 'krakow').length;
+// }
+
 
 
 function getAllNames(elements){
@@ -128,5 +159,5 @@ function getAgeOfPeopleWithNameLengthGreaterThan5(persons) {
     return ageArray;
 }
 
-console.log(getAgeOfPeopleWithNameLengthGreaterThan5(data));
+// console.log(getAgeOfPeopleWithNameLengthGreaterThan5(data));
 
