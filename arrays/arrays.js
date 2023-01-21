@@ -109,39 +109,63 @@ const data = [
 
 
 
-function getAllNames(elements){
-    const names = [];
-    let index = 0;
+// function getAllNames(elements){
+//     const names = [];
+//     let index = 0;
 
-    while (index < elements.length){
-        names.push(elements[index].name);
-        index++;
-    }
-    return names;
-}
-
+//     while (index < elements.length){
+//         names.push(elements[index].name);
+//         index++;
+//     }
+//     return names;
+// }
 // console.log(getAllNames(data));
 
-function capitalize(name){
-    return name[0].toUpperCase() + name.slice(1);
-}
+// function getAllNames(persons) {
+//     return persons.map((person) => person.name)
+// }
 
-function getPeopleWhoLovesJS(elements){
-    const names = [];
+// const getAllNames = (persons) => persons.map((person) => person.name)
 
-    for (const element of elements){
-        if (element.hobbies.includes('js')){
-            names.push(capitalize(element.name));
-        }
-    }
+const getAllNames = (persons) => persons.map((person) => capitalize(person.name))
 
-    return names.join(', ');
-}
+
+
+// function capitalize(name){
+//     return name[0].toUpperCase() + name.slice(1);
+// }
+
+const capitalize = (name) => name[0].toUpperCase() + name.slice(1)
+
+// function getPeopleWhoLovesJS(elements){
+//     const names = [];
+//
+//     for (const element of elements){
+//         if (element.hobbies.includes('js')){
+//             names.push(capitalize(element.name));
+//         }
+//     }
+//     return names.join(', ');
+// }
+
+// const getPeopleWhoLovesJs = (elements) => {
+//     const getPeopleWhoLovesJs = elements.filter((element) => element.hobbies.includes('js'))
+//     return getPeopleWhoLovesJs.map((element) => capitalize(element.name)).join(', ')
+// }
+
+// const getPeopleWhoLovesJs = (elements) => elements
+//     .filter((element) => element.hobbies.includes('js'))
+//     .map((element) => capitalize(element.name))
+//     .join(', ')
+
+// const getPeopleWhoLovesJs = (elements) => elements
+//     .reduce((acc, ce) => ce.hobbies.includes('js') ? acc + capitalize(ce.name) + ', ' : acc, "")
+//     .slice(0, -2)
 
 // console.log(getPeopleWhoLovesJS(data))
 
-function getAgeOfPeopleWithNameLengthGreaterThan5(persons) {
-    const ageArray = [];
+// function getAgeOfPeopleWithNameLengthGreaterThan5(persons) {
+//     const ageArray = [];
 
 //         for (let i = 0; i < persons.length; i++){
 //             if (persons[i].name.length > 5){
@@ -151,13 +175,98 @@ function getAgeOfPeopleWithNameLengthGreaterThan5(persons) {
 //         return ageArray;
 // }
 
-    for (const person of persons) {
-        if (person.name.length > 5) {
-            ageArray.push(person.age);
-        }
-    }
-    return ageArray;
-}
+// const getAgeOfPeopleWithNameLengthGreaterThan5 = (persons) => persons
+//     .filter((person) => person.name.length > 5)
+//     .map((person) => person.age)
+
+
+//     for (const person of persons) {
+//         if (person.name.length > 5) {
+//             ageArray.push(person.age);
+//         }
+//     }
+//     // return ageArray;
+// }
 
 // console.log(getAgeOfPeopleWithNameLengthGreaterThan5(data));
+
+// częściowo imperatywna
+// const checkIfNameExist = (items, name) => {
+//     for (const item of items) {
+//         if (item.name.toLowerCase() === name.toLowerCase()){
+//             return true
+//         }
+//     } return false
+// }
+
+// deklaratywna
+// const checkIfNameExists = (items, name) => items
+//     .filter((item) => item.name.toLowerCase() === name.toLowerCase())
+//     .length > 0
+
+// const checkIfNameExists = (items, name) => items
+//     .some((item) => item.name.toLowerCase() === name.toLowerCase())
+
+// const checkAdult = (items) => {
+//     for (const item of items) {
+//         if (item.age <= 18) {
+//             return false
+//         }
+//     } return true
+// }
+
+
+// const checkAdult = (items) => items
+//     .every((item) => item.age >= 18)
+
+// const checkAdult = (items) => !items
+//     .some((item) => item.age < 18)
+
+// const getAllHobbies = (items) => {
+//     const HobbiesArray = []
+//
+//     for (const item of items) {
+//         for (const hobby of item.hobbies){
+//             HobbiesArray.push(hobby)
+//         }
+//     }return HobbiesArray
+// }
+
+// const getAllHobbies = (items) => items
+//     .map((item) => item.hobbies)
+//     .flat()
+
+// const getAllHobbies = (items) => items
+//     .flatMap((item) => item.hobbies)
+
+// const getAllHobbies = (items) => items
+//     .reduce((acc, ce) => [...acc, ...ce.hobbies], [] )
+
+
+// const getAllUniqueHobbies = (items) => new Set (items.flatMap((item) => item.hobbies))
+
+// const getAllUniqueHobbies = (items) => items
+//     .reduce((acc, ce) => new Set([...acc, ...ce.hobbies]), new Set())
+
+// const x = [{pawel: 20}, {filip, 15}]
+
+// const getCustomObject = (items) => {
+//     const result = []
+//
+//     for (const item of items){
+//         let counter = 0
+//         for(const hobby of item.hobbies) {
+//             counter += hobby.length
+//         }
+//         result.push({[item.name]: counter})
+//     }
+//     return result
+// }
+
+// const getCustomObject = (items) => items
+//     .map((item) => ({
+//         [item.name]: item.hobbies.join('').length
+//     }))
+
+
 
