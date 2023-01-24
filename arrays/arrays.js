@@ -1,53 +1,53 @@
-const data = [
-    {
-        name: 'pawel',
-        age: 37,
-        city: 'krakow',
-        hobbies: ['js', 'python', 'drugs']
-    },
-    {
-        name: 'Filip',
-        age: 20,
-        city: 'krakow',
-        hobbies: ['js', 'sleep', 'eat']
-    },
-    {
-        name: 'andrzej',
-        age: 32,
-        city: 'krakow',
-        hobbies: ['programming','banjo','guitar']
-    },
-    {
-        name: 'maciek',
-        age: 35,
-        city: 'katowice',
-        hobbies: ['alcohol', 'programing', 'cars']
-    },
-    {
-        name: 'bartek',
-        age: 21,
-        city: 'Drogomyśl',
-        hobbies: ['strusie', 'js']
-    },
-    {
-        name: 'oliver',
-        age: 20,
-        city: 'krakow',
-        hobbies: ['technology', 'music production', 'bajking 🚴🏻']
-    },
-    {
-        name: 'jakub',
-        age: 20,
-        city: 'krakow',
-        hobbies: ['gaming', 'alcohol', 'sleeping']
-    },
-    {
-        name: 'maria',
-        age: 24,
-        city: 'warsaw',
-        hobbies: ['books', 'volleyball', 'programming']
-    }
-]
+// const data = [
+//     {
+//         name: 'pawel',
+//         age: 37,
+//         city: 'krakow',
+//         hobbies: ['js', 'python', 'drugs']
+//     },
+//     {
+//         name: 'Filip',
+//         age: 20,
+//         city: 'krakow',
+//         hobbies: ['js', 'sleep', 'eat']
+//     },
+//     {
+//         name: 'andrzej',
+//         age: 32,
+//         city: 'krakow',
+//         hobbies: ['programming','banjo','guitar']
+//     },
+//     {
+//         name: 'maciek',
+//         age: 35,
+//         city: 'katowice',
+//         hobbies: ['alcohol', 'programing', 'cars']
+//     },
+//     {
+//         name: 'bartek',
+//         age: 21,
+//         city: 'Drogomyśl',
+//         hobbies: ['strusie', 'js']
+//     },
+//     {
+//         name: 'oliver',
+//         age: 20,
+//         city: 'krakow',
+//         hobbies: ['technology', 'music production', 'bajking 🚴🏻']
+//     },
+//     {
+//         name: 'jakub',
+//         age: 20,
+//         city: 'krakow',
+//         hobbies: ['gaming', 'alcohol', 'sleeping']
+//     },
+//     {
+//         name: 'maria',
+//         age: 24,
+//         city: 'warsaw',
+//         hobbies: ['books', 'volleyball', 'programming']
+//     }
+// ]
 
 // najszybsza
 //
