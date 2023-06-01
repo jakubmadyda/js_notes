@@ -1,4 +1,4 @@
-const data = [
+const sada = [
     {
         name: 'Shrek',
         age: 106,
@@ -46,6 +46,23 @@ const data = [
        hobbies: ['gazpacho', 'working']
     },
 ]
+
+// 1. Podaj imiona postaci z najwieksza liczba dzieci
+
+
+
+// 2. Podaj imie pradawnego najstarszego stworzenia
+
+const getTheOldestCreature = (elements) => elements
+    .map((element) => element.name)
+    .sort((elementA, elementB) => elementA.age - elementB.age)
+
+// 3. Podaj imiona postaci, ktore kochaja Shreka
+
+const getPeopleWhoLovesShrek = (elements) => elements
+    .filter((element) => element.hobbies.includes('shrek'))
+    .map((element) => element.name)
+    .join(', ')
 
 
 
